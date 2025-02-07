@@ -1,13 +1,15 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-15 19:10:50
- * @LastEditTime: 2024-11-15 20:30:05
+ * @LastEditTime: 2024-11-20 11:19:10
  * @Description: 
  */
 #include <unistd.h>
 #include <errno.h>
 #include <sys/uio.h>
 #include "Buffer.h"
+
+const char Buffer::kCRLF[] = "\r\n";
 
 ssize_t Buffer::readFd(int fd, int *saveErrno)
 {

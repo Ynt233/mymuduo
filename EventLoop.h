@@ -1,7 +1,7 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-13 14:16:58
- * @LastEditTime: 2024-11-15 13:56:31
+ * @LastEditTime: 2024-11-20 11:09:16
  * @Description: Contains two main modules: Channel, Poller(abstract of epoll)
  * Can be understood as the demultiplex part in Reactor model
  */
@@ -12,6 +12,7 @@
 #include <atomic>
 #include <memory>
 #include <mutex>
+#include <any>
 #include "CurrentThread.h"
 #include "Timestamp.h"
 #include "noncopyable.h"
@@ -46,6 +47,16 @@ public:
 
     // Return if it is in the thread that created it
     bool isInLoopThread() const { return threadId_ == CurrentThread::tid(); }
+
+    void setContext(const std::any& context)
+    { context_ = context; }
+
+    const std::any& getContext() const
+    { return context_; }
+
+    std::any* getMutableContext()
+    { return &context_; }
+    
 private:
     void readHandler(); // wake up
     void doPendingFunctors();
@@ -67,5 +78,7 @@ private:
     std::atomic_bool callingPendingFunctors_; // marks if current loop has callback that needs to be done
     std::vector<Functor> pendingFunctors_; // saves all callbacks that loop needs to perform
     std::mutex mutex_; // exclusion lock, protects thread-safe operations of the pendingFunctors_
+
+    std::any context_;
 };
 

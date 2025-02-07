@@ -1,12 +1,13 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-15 15:41:31
- * @LastEditTime: 2024-11-16 10:44:00
+ * @LastEditTime: 2024-11-20 11:22:44
  * @Description: 
  */
 #pragma once
 #include <string>
 #include <memory>
+#include <any>
 #include "Buffer.h"
 #include "Callback.h"
 #include "InetAddress.h"
@@ -53,6 +54,14 @@ public:
     void connectEstablished();
     void connectDestroyed();
 
+    void setContext(const std::any& context)
+    { context_ = context; }
+    const std::any& getContext() const
+    { return context_; }
+
+    std::any* getMutableContext()
+    { return &context_; }
+
 private:
     enum StateE { kConnecting, kConnected, kDisconnecting, kDisconnected };
 
@@ -82,4 +91,6 @@ private:
     size_t highWaterMark_;
     Buffer inputBuffer_; // receive buffer
     Buffer outputBuffer_; // send buffer
+
+    std::any context_;
 };

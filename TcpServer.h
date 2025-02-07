@@ -1,7 +1,7 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-13 14:16:08
- * @LastEditTime: 2024-11-16 11:42:18
+ * @LastEditTime: 2024-11-20 11:25:48
  * @Description: class exposed for server programming
  */
 
@@ -39,6 +39,10 @@ public:
     void setWriteCompleteCallback(const WriteCompleteCallback &cb) { writeCompleteCallback_ = cb; }
 
     void setThreadNum(int numThreads);
+
+    EventLoop *getLoop() const { return loop_; }
+    std::string name() const { return name_; }
+    std::string ipPort() const { return ipPort_; }
 
     void start();
 private:

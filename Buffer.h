@@ -1,7 +1,7 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-15 15:43:18
- * @LastEditTime: 2024-11-15 20:25:43
+ * @LastEditTime: 2024-11-20 12:07:57
  * @Description: 
  */
 #pragma once
@@ -51,6 +51,23 @@ public:
         return result;
     }
 
+    void retrieveUntil(const char* end)
+    {
+        retrieve(end - peek());
+    }
+
+    const char* findCRLF() const
+    {
+        const char* crlf = std::search(peek(), beginWrite(), kCRLF, kCRLF+2);
+        return crlf == beginWrite() ? NULL : crlf;
+    }
+
+    const char* findCRLF(const char* start) const
+    {
+        const char* crlf = std::search(start, beginWrite(), kCRLF, kCRLF+2);
+        return crlf == beginWrite() ? NULL : crlf;
+    }
+
     void ensureWritableBytes(size_t len)
     {
         if (len > writableBytes()) {
@@ -71,6 +88,9 @@ public:
             writeIndex_ = readIndex_ + readable;
         }
     }
+
+    void append(const std::string& str)
+    { append(str.c_str(), str.size()); }
 
     void append(const char *data, size_t len)
     {
@@ -93,5 +113,7 @@ private:
     std::vector<char> buffer_;
     size_t readIndex_;
     size_t writeIndex_;
+
+    static const char kCRLF[];
 };
 
