@@ -1,7 +1,7 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-15 15:42:28
- * @LastEditTime: 2024-11-15 19:45:02
+ * @LastEditTime: 2025-02-09 14:43:59
  * @Description: 
  */
 #pragma once
@@ -20,3 +20,4 @@ using WriteCompleteCallback = std::function<void(const TcpConnectionPtr&)>;
 using MessageCallback = std::function<void(const TcpConnectionPtr&, Buffer*, Timestamp)>;
 
 using HighWaterMarkCallback = std::function<void(const TcpConnectionPtr&, size_t)>;
+using TimerCallback = std::function<void()>;

@@ -1,7 +1,7 @@
 /*
  * @Author: Ynt
  * @Date: 2024-11-13 14:17:04
- * @LastEditTime: 2024-11-14 17:11:55
+ * @LastEditTime: 2025-02-09 17:27:29
  * @Description: 
  */
 #include <sys/eventfd.h>
@@ -36,7 +36,8 @@ EventLoop::EventLoop()
     threadId_(CurrentThread::tid()),
     poller_(Poller::newDefaultPoller(this)),
     wakeupFd_(createEventFd()),
-    wakeupChannel_(new Channel(this, wakeupFd_))
+    wakeupChannel_(new Channel(this, wakeupFd_)),
+    timerQueue_(new TimerQueue(this))
 {
     LOG_DEBUG("EventLoop created %p in thread %d\n", this, threadId_);
     if (t_loopInThisThread) {
@@ -168,4 +169,27 @@ void EventLoop::doPendingFunctors()
     }
     
     callingPendingFunctors_ = false;
+}
+
+TimerId EventLoop::runAt(Timestamp time, TimerCallback cb)
+{
+    return timerQueue_->addTimer(std::move(cb), time, 0.0);    
+}
+
+
+TimerId EventLoop::runAfter(double delay, TimerCallback cb)
+{
+    Timestamp expiredTime(addTime(Timestamp::now(), delay));
+    return runAt(expiredTime, std::move(cb));
+}
+
+TimerId EventLoop::runEvery(double interval, TimerCallback cb)
+{
+    Timestamp expiredTime(addTime(Timestamp::now(), interval));
+    return timerQueue_->addTimer(std::move(cb), expiredTime, interval);
+}
+
+void EventLoop::cancelTimer(TimerId timerId)
+{
+    return timerQueue_->cancel(timerId);
 }

@@ -73,7 +73,8 @@
     "stop_token": "cpp",
     "thread": "cpp",
     "strstream": "cpp",
-    "any": "cpp"
+    "any": "cpp",
+    "fstream": "cpp"
   },
   "fileheader.cursorMode": {},
   "fileheader.customMade": {

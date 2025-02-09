@@ -1,5 +1,6 @@
 #include <mymuduo/EventLoop.h>
 #include <mymuduo/Logger.h>
+#include <mymuduo/AsyncLogger.h>
 #include "../HttpRequest.h"
 #include "../HttpResponse.h"
 #include "../HttpServer.h"
@@ -12,9 +13,16 @@
 extern char favicon[555];
 bool benchmark = true;
 
+AsyncLogger* g_asyncLog = NULL;
+
+void asyncOutput(const char* msg, int len)
+{
+  g_asyncLog->append(msg, len);
+}
+
 void onRequest(const HttpRequest& req, HttpResponse* resp)
 {
-  std::cout << "Headers " << req.methodString() << " " << req.path() << std::endl;
+  // std::cout << "Headers " << req.methodString() << " " << req.path() << std::endl;
   if (!benchmark)
   {
     const std::map<std::string, std::string>& headers = req.headers();
@@ -67,6 +75,10 @@ int main(int argc, char* argv[])
     numThreads = atoi(argv[1]);
   }
   EventLoop loop;
+  // AsyncLogger log;
+  // g_asyncLog = &log;
+  // log.start();
+  // Logger::setOutPut(asyncOutput);
   HttpServer server(&loop, InetAddress(8899), "dummy");
   server.setHttpCallback(onRequest);
   server.setThreadNum(numThreads);

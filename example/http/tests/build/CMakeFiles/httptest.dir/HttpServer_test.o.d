@@ -197,6 +197,12 @@ CMakeFiles/httptest.dir/HttpServer_test.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/mymuduo/noncopyable.h \
+ /usr/include/mymuduo/Logger.h /usr/include/c++/11/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/mymuduo/AsyncLogger.h /usr/include/mymuduo/CountDownLatch.h \
+ /usr/include/c++/11/condition_variable /usr/include/mymuduo/Thread.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/mymuduo/Logger.h \
  /home/yu/muduo/example/http/tests/../HttpRequest.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \

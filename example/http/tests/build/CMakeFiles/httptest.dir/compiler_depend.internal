@@ -251,6 +251,17 @@ CMakeFiles/httptest.dir/HttpServer_test.o
  /usr/include/c++/11/bits/istream.tcc
  /usr/include/mymuduo/noncopyable.h
  /usr/include/mymuduo/Logger.h
+ /usr/include/c++/11/cstring
+ /usr/include/string.h
+ /usr/include/strings.h
+ /usr/include/mymuduo/AsyncLogger.h
+ /usr/include/mymuduo/CountDownLatch.h
+ /usr/include/c++/11/condition_variable
+ /usr/include/mymuduo/Thread.h
+ /usr/include/c++/11/thread
+ /usr/include/c++/11/bits/std_thread.h
+ /usr/include/c++/11/bits/this_thread_sleep.h
+ /usr/include/mymuduo/Logger.h
  /home/yu/muduo/example/http/HttpRequest.h
  /usr/include/c++/11/map
  /usr/include/c++/11/bits/stl_tree.h
@@ -978,12 +989,16 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o
  /usr/include/x86_64-linux-gnu/bits/in.h
  /usr/include/mymuduo/Channel.h
  /usr/include/mymuduo/Logger.h
+ /usr/include/c++/11/cstring
+ /usr/include/string.h
+ /usr/include/strings.h
  /usr/include/mymuduo/EventLoopThreadPool.h
  /usr/include/mymuduo/Callback.h
  /usr/include/mymuduo/Buffer.h
  /usr/include/c++/11/algorithm
  /usr/include/c++/11/pstl/glue_algorithm_defs.h
  /usr/include/mymuduo/TcpConnection.h
+ /usr/include/mymuduo/Logger.h
  /home/yu/muduo/example/http/HttpContext.h
  /home/yu/muduo/example/http/HttpRequest.h
  /usr/include/c++/11/map

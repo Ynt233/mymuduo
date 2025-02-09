@@ -2,7 +2,7 @@
 ###
  # @Author: Ynt
  # @Date: 2024-11-16 17:54:23
- # @LastEditTime: 2024-11-20 10:46:32
+ # @LastEditTime: 2025-02-07 15:12:39
  # @Description: 
 ### 
 
@@ -30,5 +30,6 @@ do
 done
 
 sudo cp `pwd`/lib/libmymuduo.so /usr/lib
+sudo cp `pwd`/lib/libmymuduo.so /usr/local/lib
 
 sudo ldconfig

@@ -218,11 +218,13 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/mymuduo/Channel.h \
- /usr/include/mymuduo/Logger.h /usr/include/mymuduo/EventLoopThreadPool.h \
+ /usr/include/mymuduo/Logger.h /usr/include/c++/11/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/mymuduo/EventLoopThreadPool.h \
  /usr/include/mymuduo/Callback.h /usr/include/mymuduo/Buffer.h \
  /usr/include/c++/11/algorithm \
  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
- /usr/include/mymuduo/TcpConnection.h \
+ /usr/include/mymuduo/TcpConnection.h /usr/include/mymuduo/Logger.h \
  /home/yu/muduo/example/http/HttpContext.h \
  /home/yu/muduo/example/http/HttpRequest.h /usr/include/c++/11/map \
  /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \

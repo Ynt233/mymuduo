@@ -153,6 +153,30 @@ Acceptor.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Acceptor.cc.s
 .PHONY : Acceptor.cc.s
 
+AsyncLogger.o: AsyncLogger.cc.o
+.PHONY : AsyncLogger.o
+
+# target to build an object file
+AsyncLogger.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/AsyncLogger.cc.o
+.PHONY : AsyncLogger.cc.o
+
+AsyncLogger.i: AsyncLogger.cc.i
+.PHONY : AsyncLogger.i
+
+# target to preprocess a source file
+AsyncLogger.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/AsyncLogger.cc.i
+.PHONY : AsyncLogger.cc.i
+
+AsyncLogger.s: AsyncLogger.cc.s
+.PHONY : AsyncLogger.s
+
+# target to generate assembly for a file
+AsyncLogger.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/AsyncLogger.cc.s
+.PHONY : AsyncLogger.cc.s
+
 Buffer.o: Buffer.cc.o
 .PHONY : Buffer.o
 
@@ -200,6 +224,30 @@ Channel.s: Channel.cc.s
 Channel.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Channel.cc.s
 .PHONY : Channel.cc.s
+
+CoutDownLatch.o: CoutDownLatch.cc.o
+.PHONY : CoutDownLatch.o
+
+# target to build an object file
+CoutDownLatch.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CoutDownLatch.cc.o
+.PHONY : CoutDownLatch.cc.o
+
+CoutDownLatch.i: CoutDownLatch.cc.i
+.PHONY : CoutDownLatch.i
+
+# target to preprocess a source file
+CoutDownLatch.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CoutDownLatch.cc.i
+.PHONY : CoutDownLatch.cc.i
+
+CoutDownLatch.s: CoutDownLatch.cc.s
+.PHONY : CoutDownLatch.s
+
+# target to generate assembly for a file
+CoutDownLatch.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/CoutDownLatch.cc.s
+.PHONY : CoutDownLatch.cc.s
 
 CurrentThread.o: CurrentThread.cc.o
 .PHONY : CurrentThread.o
@@ -513,6 +561,54 @@ Thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Thread.cc.s
 .PHONY : Thread.cc.s
 
+Timer.o: Timer.cc.o
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Timer.cc.o
+.PHONY : Timer.cc.o
+
+Timer.i: Timer.cc.i
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Timer.cc.i
+.PHONY : Timer.cc.i
+
+Timer.s: Timer.cc.s
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Timer.cc.s
+.PHONY : Timer.cc.s
+
+TimerQueue.o: TimerQueue.cc.o
+.PHONY : TimerQueue.o
+
+# target to build an object file
+TimerQueue.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TimerQueue.cc.o
+.PHONY : TimerQueue.cc.o
+
+TimerQueue.i: TimerQueue.cc.i
+.PHONY : TimerQueue.i
+
+# target to preprocess a source file
+TimerQueue.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TimerQueue.cc.i
+.PHONY : TimerQueue.cc.i
+
+TimerQueue.s: TimerQueue.cc.s
+.PHONY : TimerQueue.s
+
+# target to generate assembly for a file
+TimerQueue.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TimerQueue.cc.s
+.PHONY : TimerQueue.cc.s
+
 Timestamp.o: Timestamp.cc.o
 .PHONY : Timestamp.o
 
@@ -549,12 +645,18 @@ help:
 	@echo "... Acceptor.o"
 	@echo "... Acceptor.i"
 	@echo "... Acceptor.s"
+	@echo "... AsyncLogger.o"
+	@echo "... AsyncLogger.i"
+	@echo "... AsyncLogger.s"
 	@echo "... Buffer.o"
 	@echo "... Buffer.i"
 	@echo "... Buffer.s"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
+	@echo "... CoutDownLatch.o"
+	@echo "... CoutDownLatch.i"
+	@echo "... CoutDownLatch.s"
 	@echo "... CurrentThread.o"
 	@echo "... CurrentThread.i"
 	@echo "... CurrentThread.s"
@@ -594,6 +696,12 @@ help:
 	@echo "... Thread.o"
 	@echo "... Thread.i"
 	@echo "... Thread.s"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
+	@echo "... TimerQueue.o"
+	@echo "... TimerQueue.i"
+	@echo "... TimerQueue.s"
 	@echo "... Timestamp.o"
 	@echo "... Timestamp.i"
 	@echo "... Timestamp.s"

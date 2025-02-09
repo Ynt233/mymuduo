@@ -250,6 +250,17 @@ CMakeFiles/httptest.dir/HttpServer_test.o: ../HttpServer_test.cc \
   /usr/include/c++/11/bits/istream.tcc \
   /usr/include/mymuduo/noncopyable.h \
   /usr/include/mymuduo/Logger.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/mymuduo/AsyncLogger.h \
+  /usr/include/mymuduo/CountDownLatch.h \
+  /usr/include/c++/11/condition_variable \
+  /usr/include/mymuduo/Thread.h \
+  /usr/include/c++/11/thread \
+  /usr/include/c++/11/bits/std_thread.h \
+  /usr/include/c++/11/bits/this_thread_sleep.h \
+  /usr/include/mymuduo/Logger.h \
   /home/yu/muduo/example/http/HttpRequest.h \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
@@ -974,12 +985,16 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
   /usr/include/x86_64-linux-gnu/bits/in.h \
   /usr/include/mymuduo/Channel.h \
   /usr/include/mymuduo/Logger.h \
+  /usr/include/c++/11/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/mymuduo/EventLoopThreadPool.h \
   /usr/include/mymuduo/Callback.h \
   /usr/include/mymuduo/Buffer.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
   /usr/include/mymuduo/TcpConnection.h \
+  /usr/include/mymuduo/Logger.h \
   /home/yu/muduo/example/http/HttpContext.h \
   /home/yu/muduo/example/http/HttpRequest.h \
   /usr/include/c++/11/map \
@@ -1030,13 +1045,25 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/algorithm:
 
+/usr/include/mymuduo/Buffer.h:
+
+/home/yu/muduo/example/http/HttpResponse.h:
+
+/usr/include/assert.h:
+
+/usr/include/c++/11/bits/stl_multimap.h:
+
+/usr/include/c++/11/bits/stl_map.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/map:
+
 /usr/include/c++/11/bit:
 
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
-
-/usr/include/assert.h:
 
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
@@ -1093,6 +1120,8 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/include/strings.h:
 
 /usr/include/wchar.h:
 
@@ -1160,8 +1189,6 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/tuple:
 
-/usr/include/c++/11/bits/stl_tree.h:
-
 ../HttpServer_test.cc:
 
 /usr/include/c++/11/new:
@@ -1212,13 +1239,9 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/features.h:
 
-/usr/include/c++/11/bits/stl_multimap.h:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
-
-/usr/include/mymuduo/Buffer.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
 
@@ -1278,6 +1301,8 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/backward/auto_ptr.h:
 
+/usr/include/c++/11/bits/std_thread.h:
+
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
@@ -1298,6 +1323,8 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/unordered_map:
 
+/usr/include/mymuduo/Thread.h:
+
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/c++/11/bits/predefined_ops.h:
@@ -1307,8 +1334,6 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/11/bits/range_access.h:
-
-/usr/include/c++/11/map:
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
@@ -1336,10 +1361,6 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
 
-/usr/include/x86_64-linux-gnu/asm/sockios.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/c++/11/typeinfo:
@@ -1352,9 +1373,9 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
-/usr/include/c++/11/bits/atomic_lockfree_defines.h:
+/usr/include/mymuduo/CountDownLatch.h:
 
-/usr/include/c++/11/bits/streambuf.tcc:
+/usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
@@ -1430,7 +1451,11 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/c++/11/cstdio:
 
-/usr/include/c++/11/ratio:
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
+
+/usr/include/c++/11/cstring:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -1498,6 +1523,12 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/stdio.h:
 
+/usr/include/c++/11/condition_variable:
+
+/usr/include/c++/11/ratio:
+
+/usr/include/c++/11/thread:
+
 /usr/include/c++/11/bits/charconv.h:
 
 /usr/include/c++/11/bits/basic_string.tcc:
@@ -1546,6 +1577,8 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
+/usr/include/c++/11/bits/this_thread_sleep.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/c++/11/bits/locale_facets.tcc:
@@ -1570,6 +1603,8 @@ CMakeFiles/httptest.dir/home/yu/muduo/example/http/HttpServer.o: /home/yu/muduo/
 
 /usr/include/mymuduo/noncopyable.h:
 
-/usr/include/c++/11/bits/stl_map.h:
+/usr/include/c++/11/bits/streambuf.tcc:
 
-/home/yu/muduo/example/http/HttpResponse.h:
+/usr/include/string.h:
+
+/usr/include/mymuduo/AsyncLogger.h:
